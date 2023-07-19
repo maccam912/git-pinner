@@ -2,3 +2,4 @@ Flask
 IPFS-Toolkit
 celery
 redis
+gunicorn

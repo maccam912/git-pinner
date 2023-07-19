@@ -5,7 +5,6 @@ RUN wget https://dist.ipfs.tech/kubo/v0.21.0/kubo_v0.21.0_linux-amd64.tar.gz
 RUN tar -xvf kubo_v0.21.0_linux-amd64.tar.gz
 RUN rm -rf kubo_v0.21.0_linux-amd64.tar.gz
 RUN bash /kubo/install.sh
-RUN ipfs init
 
 # Set environment varibles
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -24,4 +23,4 @@ COPY . /code/
 # Expose the Flask port
 EXPOSE 5000
 
-CMD ["python", "server.py"]
+CMD ["bash", "startup.sh"]
