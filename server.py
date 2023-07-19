@@ -61,8 +61,9 @@ def run_job(id, git_url, db_path):
         logger.error(f"Error occurred while running job {id}. Error: {str(e)}")
         raise e
 
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s')
+db.create_db("pins.db")
+logger.info("Server started successfully.")
+
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s')
-    db.create_db("pins.db")
-    logger.info("Server started successfully.")
     app.run(debug=True)
