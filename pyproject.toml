@@ -1,0 +1,20 @@
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Matt Koski", email = "maccam912@gmail.com"},
+]
+dependencies = [
+    "Flask",
+    "celery",
+    "redis",
+    "IPFS-Toolkit>=0.5.14",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
