@@ -3,3 +3,4 @@ IPFS-Toolkit
 celery
 redis
 gunicorn
+huggingface_hub
